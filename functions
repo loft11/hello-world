@@ -1,0 +1,102 @@
+#Функция, которая сложит два числа 
+
+def add_func(num1, num2):
+    new_num = num1 + num2
+    return new_num 
+
+print(add_func(15, 21))
+
+#Функция, которая перемножит два числа 
+
+def multiplicate(num1, num2):
+    new_num = num1*num2
+    return new_num 
+
+print(multiplicate(12,5))
+
+#Функция, которая выводит большее из 2 чисел 
+
+def greater_of_two(num1, num2): #функция со вложенным условием, которая находит большее число из двух 
+    if num1 > num2:
+        return num1
+    else:
+        return num2 
+
+print(greater_of_two(15, 28))
+
+#Функция, которая выводит большее из 3 чисел 
+
+def greater_of_three(num1, num2, num3):
+    if num1 > num2 and num2 < num3: 
+        return num1
+    elif num1 < num2 and num2 > num3: 
+        return num2 
+    else: 
+        return num3
+    
+print(greater_of_three(15, 25, 56))
+        
+
+
+#Написать функцию, которая возвращает квадрат числа 
+
+def square(value):
+    """Returns the square of a number"""
+    new_value = value**2
+    return new_value
+print(square(15)) 
+
+
+#Написать функцию, которая возвращает кортеж с двумя строками
+
+def shout_all(word_1, word_2):
+      shout_1 = word_1 + "???"
+      shout_2 = word_2 + "!!!"
+      shout_words = (shout_1, shout_2)
+      return shout_words
+
+yell_1, yell_2 = shout_all('Даша', 'привет')
+print(yell_1)
+print(yell_2)
+
+
+#Посчитать средний бал, когда дан список оценок 
+
+marks = [5, 7, 8, 15, 21]
+
+def average_marks(marks):
+     sum1 = sum(marks)
+     total_subjects = len(marks)
+     average = sum1 / total_subjects 
+     return average 
+
+my_mark = average_marks(marks)
+print('Your mark is', my_mark)
+
+
+#Функия, которая перемножит числа в списке 
+
+list1 = (8, 2, 3, -1, 7)
+
+def multiplicate_num(var):
+    total = 1 
+    for x in var:    #цикл, который умножит 1 на 8, обновит переменную, и так пока не дойдет до конца списка)
+        total *= x 
+    return total
+        
+print(multiplicate_num(list1))
+
+#Потренироваться с ключевым словом global 
+
+team = 'teachers'
+
+def change_team():
+    global team 
+    team = 'masters'
+    
+print(team)
+change_team() #вызываем функцию, которая поменяет переменную и выводим снова 
+print(team)
+
+
+
